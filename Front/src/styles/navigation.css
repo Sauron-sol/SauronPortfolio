@@ -1,0 +1,119 @@
+/* src/styles/navigation.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-black);
+  z-index: 2; /* Assure que le logo reste au-dessus */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  left: 65%; /* Décalé de 50% à 65% */
+  transform: translateX(-50%); /* Centre les liens */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-red);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #ff0000;
+}
+
+.nav-link.active {
+  color: #ff0000;
+  font-weight: 600;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+  }
+
+  .nav-links {
+    position: fixed;
+    left: auto;
+    transform: none;
+    top: 70px;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    background: white;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+    height: 100vh;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+}
