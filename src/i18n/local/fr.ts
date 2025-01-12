@@ -140,6 +140,7 @@ export const fr = {
       gitlab: "GitLab",
       azure_devops: "Azure DevOps",
       vscode: "Visual Studio Code",
+      cursor: "Cursor",
       copilot: "GitHub Copilot",
       unix: "Unix",
       macos: "macOS",
@@ -176,29 +177,35 @@ export const fr = {
           technologies: ["React", "TypeScript", "Express", "Framer Motion"],
           github: "https://github.com/Sauron-sol"
         },
-          lottery: {
-              title: "Smart Contract Lottery",
-              description: "Projet de loterie utilisant Solidity et Foundry, permettant une implémentation sécurisée et décentralisée d'un système de loterie sur la blockchain.",
-              technologies: ["Solidity", "Foundry", "Smart Contracts", "Ethereum"],
-              github: "https://github.com/Sauron-sol/foundry-smart-contract-lottery",
-          },
-          security: {
-              title: "Security Review Portfolio",
-              description: "Portfolio d'audits de sécurité de smart contracts, démontrant l'expertise en sécurité Web3 et Solidity.",
-              technologies: ["Solidity", "Web3 Security", "Smart Contracts", "Audit"],
-              github: "https://github.com/Sauron-sol/Security_Review_Portfolio",
-          },
-          nft: {
-              title: "Foundry NFT Project",
-              description: "Collection de smart contracts Solidity pour la création et la gestion de NFTs sur la blockchain Ethereum.",
-              technologies: ["Solidity", "NFT", "Ethereum", "Foundry", "Smart Contracts"],
-              github: "https://github.com/Sauron-sol/Foundry-NFT-f23",
-          },
-          cia: {
-            title: "Consolidate Investigate Administrate",
-            description: "Pentest sur une application dépréciée",
-            technologies: ["BurpSuite", "Docker", "Gitlab", "Semgrep", "Zap"],
-            github: "https://github.com/Sauron-sol/Consolidate-Investigate-Administrate",
+        lottery: {
+          title: "Smart Contract Lottery",
+          description: "Projet de loterie utilisant Solidity et Foundry, permettant une implémentation sécurisée et décentralisée d'un système de loterie sur la blockchain.",
+          technologies: ["Solidity", "Foundry", "Smart Contracts", "Ethereum"],
+          github: "https://github.com/Sauron-sol/foundry-smart-contract-lottery",
+        },
+        security: {
+          title: "Security Review Portfolio",
+          description: "Portfolio d'audits de sécurité de smart contracts, démontrant l'expertise en sécurité Web3 et Solidity.",
+          technologies: ["Solidity", "Web3 Security", "Smart Contracts", "Audit"],
+          github: "https://github.com/Sauron-sol/Security_Review_Portfolio",
+        },
+        nft: {
+          title: "Foundry NFT Project",
+          description: "Collection de smart contracts Solidity pour la création et la gestion de NFTs sur la blockchain Ethereum.",
+          technologies: ["Solidity", "NFT", "Ethereum", "Foundry", "Smart Contracts"],
+          github: "https://github.com/Sauron-sol/Foundry-NFT-f23",
+        },
+        cia: {
+          title: "Consolidate Investigate Administrate",
+          description: "Pentest sur une application dépréciée",
+          technologies: ["BurpSuite", "Docker", "Gitlab", "Semgrep", "Zap"],
+          github: "https://github.com/Sauron-sol/Consolidate-Investigate-Administrate",
+        },
+        cybertoolbox: {
+          title: "CyberToolBox",
+          description: "Une collection d'outils et de projets orientés cybersécurité à des fins éducatives.",
+          technologies: ["Python", "HTML", "CSS"],
+          github: "https://github.com/Sauron-sol/CyberToolBox",
         }
       }
 };

@@ -139,6 +139,7 @@ export const de = {
       gitlab: "GitLab",
       azure_devops: "Azure DevOps",
       vscode: "Visual Studio Code",
+      cursor: "Cursor",
       copilot: "GitHub Copilot",
       unix: "Unix",
       macos: "macOS",
@@ -176,27 +177,33 @@ export const de = {
     },
     lottery: {
       title: "Smart Contract Lottery",
-      description: "Lotterieprojekt mit Solidity und Foundry, das eine sichere und dezentrale Implementierung eines Blockchain-basierten Lotteriesystems ermöglicht.",
+      description: "Lotterie-Projekt mit Solidity und Foundry, das eine sichere und dezentrale Implementierung eines Blockchain-Lotterie-Systems ermöglicht.",
       technologies: ["Solidity", "Foundry", "Smart Contracts", "Ethereum"],
-      github: "https://github.com/Sauron-sol/foundry-smart-contract-lottery"
+      github: "https://github.com/Sauron-sol/foundry-smart-contract-lottery",
     },
     security: {
       title: "Security Review Portfolio",
       description: "Portfolio von Smart-Contract-Sicherheitsaudits, das Expertise in Web3-Sicherheit und Solidity demonstriert.",
       technologies: ["Solidity", "Web3 Security", "Smart Contracts", "Audit"],
-      github: "https://github.com/Sauron-sol/Security_Review_Portfolio"
+      github: "https://github.com/Sauron-sol/Security_Review_Portfolio",
     },
     nft: {
-        title: "Foundry NFT Project",
-        description: "NFT-Projekt mit Solidity und Foundry, das die Erstellung und Verwaltung von NFTs auf der Ethereum-Blockchain ermöglicht.",
-        technologies: ["Solidity", "NFT", "Ethereum", "Foundry", "Smart Contracts"],
-        github: "https://github.com/Sauron-sol/Foundry-NFT-f23",
+      title: "Foundry NFT Project",
+      description: "Sammlung von Solidity Smart Contracts für die Erstellung und Verwaltung von NFTs auf der Ethereum-Blockchain.",
+      technologies: ["Solidity", "NFT", "Ethereum", "Foundry", "Smart Contracts"],
+      github: "https://github.com/Sauron-sol/Foundry-NFT-f23",
     },
     cia: {
       title: "Consolidate Investigate Administrate",
-      description: "Penetrationstest- und Sicherheitsbewertungsplattform.",
+      description: "Pentest auf einer veralteten Webanwendung",
       technologies: ["BurpSuite", "Docker", "Gitlab", "Semgrep", "Zap"],
       github: "https://github.com/Sauron-sol/Consolidate-Investigate-Administrate",
-  }
+    },
+    cybertoolbox: {
+      title: "CyberToolBox",
+      description: "Eine Sammlung von Cybersicherheits-orientierten Tools und Projekten für Bildungszwecke.",
+      technologies: ["Python", "HTML"],
+      github: "https://github.com/Sauron-sol/CyberToolBox",
+    }
   }
 };

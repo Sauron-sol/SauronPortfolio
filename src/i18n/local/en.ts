@@ -139,6 +139,7 @@ export const en = {
       gitlab: "GitLab",
       azure_devops: "Azure DevOps",
       vscode: "Visual Studio Code",
+      cursor: "Cursor",
       copilot: "GitHub Copilot",
       unix: "Unix",
       macos: "macOS",
@@ -171,33 +172,39 @@ export const en = {
       title: "My Projects",
       portfolio: {
         title: "Portfolio",
-        description: "Personal portfolio showcasing web development projects, built with React, TypeScript, Express and Framer Motion.",
+        description: "Personal portfolio developed with React and Express",
         technologies: ["React", "TypeScript", "Express", "Framer Motion"],
         github: "https://github.com/Sauron-sol"
       },
         lottery: {
-            title: "Smart Contract Lottery",
-            description: "Solidity smart contract lottery project, demonstrating expertise in Solidity, Foundry and Ethereum smart contracts.",
-            technologies: ["Solidity", "Foundry", "Smart Contracts", "Ethereum"],
-            github: "https://github.com/Sauron-sol/foundry-smart-contract-lottery",
+          title: "Smart Contract Lottery",
+          description: "Lottery project using Solidity and Foundry, enabling a secure and decentralized implementation of a blockchain lottery system.",
+          technologies: ["Solidity", "Foundry", "Smart Contracts", "Ethereum"],
+          github: "https://github.com/Sauron-sol/foundry-smart-contract-lottery",
         },
         security: {
-            title: "Security Review Portfolio",
-            description: "Smart contract security audit portfolio, demonstrating expertise in Web3 security and Solidity.",
-            technologies: ["Solidity", "Web3 Security", "Smart Contracts", "Audit"],
-            github: "https://github.com/Sauron-sol/Security_Review_Portfolio",
+          title: "Security Review Portfolio",
+          description: "Portfolio of smart contract security audits, demonstrating expertise in Web3 security and Solidity.",
+          technologies: ["Solidity", "Web3 Security", "Smart Contracts", "Audit"],
+          github: "https://github.com/Sauron-sol/Security_Review_Portfolio",
         },
         nft: {
-            title: "Foundry NFT Project",
-            description: "Foundry NFT project, demonstrating expertise in Solidity, NFT, Ethereum, Foundry and smart contracts.",
-            technologies: ["Solidity", "NFT", "Ethereum", "Foundry", "Smart Contracts"],
-            github: "https://github.com/Sauron-sol/Foundry-NFT-f23",
+          title: "Foundry NFT Project",
+          description: "Collection of Solidity smart contracts for creating and managing NFTs on the Ethereum blockchain.",
+          technologies: ["Solidity", "NFT", "Ethereum", "Foundry", "Smart Contracts"],
+          github: "https://github.com/Sauron-sol/Foundry-NFT-f23",
         },
         cia: {
           title: "Consolidate Investigate Administrate",
           description: "Pentest on deprecated web application",
           technologies: ["BurpSuite", "Docker", "Gitlab", "Semgrep", "Zap"],
           github: "https://github.com/Sauron-sol/Consolidate-Investigate-Administrate",
+        },
+        cybertoolbox: {
+          title: "CyberToolBox",
+          description: "A collection of cybersecurity-oriented tools and projects for educational purposes.",
+          technologies: ["Python", "HTML"],
+          github: "https://github.com/Sauron-sol/CyberToolBox",
+        }
       }
-    },
-};
+}

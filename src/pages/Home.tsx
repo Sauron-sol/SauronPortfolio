@@ -219,6 +219,11 @@ const Home: React.FC = () => {
         name: t('skills.items.copilot'),
         level: 85,
         logo: getLogoPath('copilot')
+      },
+      {
+        name: t('skills.items.cursor'),
+        level: 85,
+        logo: getLogoPath('cursor')
       }
     ],
     os: [

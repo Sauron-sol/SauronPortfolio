@@ -499,3 +499,76 @@ body.dark-theme {
 .dark-theme .description {
   color: #999;
 }
+
+/* Styles pour la section Langues */
+.languages-section {
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.language-card {
+  background: var(--card-bg-light);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.dark-theme .language-card {
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-card:hover {
+  transform: translateY(-2px);
+}
+
+.language-flag {
+  width: 48px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.language-info {
+  flex: 1;
+  text-align: left;
+}
+
+.language-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.language-level {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.dark-theme .language-level {
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .languages-section {
+    padding: 1rem;
+  }
+  
+  .language-card {
+    padding: 1rem;
+  }
+  
+  .language-flag {
+    width: 40px;
+    height: 28px;
+  }
+  
+  .language-name {
+    font-size: 1.1rem;
+  }
+}

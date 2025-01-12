@@ -1,5 +1,5 @@
 // src/pages/Projects.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/projects.css';
 import { useTranslation } from 'react-i18next';
@@ -62,6 +62,15 @@ const Projects = () => {
         ? t('projects.cia.technologies', { returnObjects: true }) as string[]
         : [],
       github: t('projects.cia.github')
+    },
+    {
+      id: 6,
+      title: t('projects.cybertoolbox.title'),
+      description: t('projects.cybertoolbox.description'),
+      technologies: Array.isArray(t('projects.cybertoolbox.technologies', { returnObjects: true }))
+        ? t('projects.cybertoolbox.technologies', { returnObjects: true }) as string[]
+        : [],
+      github: t('projects.cybertoolbox.github')
     }
   ];
 

@@ -624,33 +624,89 @@ h2 {
 /* Styles pour la section langues */
 .languages-section {
   margin: 4rem 0;
+  padding: 0 1rem;
 }
 
 .languages-grid {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
 .language-item {
+  flex: 0 1 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   background: var(--card-bg-light);
-  border-radius: 8px;
-  min-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.language-flag {
-  width: 40px;
-  height: 40px;
+.language-item:hover {
+  transform: translateY(-5px);
 }
 
 .dark-theme .language-item {
   background: var(--card-bg-dark);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-flag {
+  width: 48px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .language-flag {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.language-item h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.language-item p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.dark-theme .language-item p {
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .languages-section {
+    margin: 3rem 0;
+  }
+
+  .languages-grid {
+    gap: 1rem;
+  }
+
+  .language-item {
+    flex: 0 1 100%;
+    padding: 1.5rem;
+  }
+
+  .language-flag {
+    width: 40px;
+    height: 28px;
+  }
+
+  .language-item h3 {
+    font-size: 1.1rem;
+  }
 }
 
 /* Add to your CSS */
