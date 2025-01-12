@@ -1,7 +1,6 @@
 import React, { createContext, useState } from 'react';
-import { createBrowserRouter, RouterProvider, Routes } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { motion } from 'framer-motion';
 import './App.css';
 import RootLayout from './components/layout/RootLayout';
 import Home from './pages/Home';

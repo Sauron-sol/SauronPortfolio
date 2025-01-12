@@ -15,8 +15,7 @@ interface Project {
 }
 
 const Projects = () => {
-  const { t, i18n } = useTranslation();
-  const [filter, setFilter] = useState<string>('all');
+  const { t } = useTranslation();
   
   const projects: Project[] = [
     {
