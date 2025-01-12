@@ -389,7 +389,7 @@ const Home: React.FC = () => {
     {
       platform: 'linkedin',
       svg: process.env.PUBLIC_URL + '/logos/linkedin.png',
-      url: 'https://www.linkedin.com/in/florian-bonamy-9553a8203/'
+      url: 'https://www.linkedin.com/in/florian-%E2%82%BF-9553a8203/'
     },
     {
       platform: 'email',
