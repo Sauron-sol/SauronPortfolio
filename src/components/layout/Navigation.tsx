@@ -27,33 +27,38 @@ const Navigation = () => {
     };
   }, [isOpen]);
 
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <img src="logos/logo-perso.jpeg" alt="logo" className="social-icon" />
       
-      <motion.div 
-        className={`nav-links ${isOpen ? 'active' : ''}`}
-        initial={false}
-      >
+      <div className={`nav-links ${isOpen ? 'active' : ''}`}>
         <NavLink 
           to="/"
           className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
-          onClick={() => setIsOpen(false)}
+          onClick={handleLinkClick}
         >
           {t('navigation.home')}
         </NavLink>
         <NavLink 
           to="/projects"
           className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
-          onClick={() => setIsOpen(false)}
+          onClick={handleLinkClick}
         >
           {t('navigation.projects')}
         </NavLink>
-      </motion.div>
+      </div>
 
       <button 
         className={`nav-toggle ${isOpen ? 'active' : ''}`} 
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={handleToggle}
         aria-label="Toggle menu"
       >
         <span></span>

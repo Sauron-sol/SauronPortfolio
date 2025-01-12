@@ -111,7 +111,7 @@
   }
 
   .nav-toggle.active span:nth-child(1) {
-    transform: rotate(45deg);
+    transform: translateY(0) rotate(45deg);
   }
 
   .nav-toggle.active span:nth-child(2) {
@@ -119,7 +119,7 @@
   }
 
   .nav-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg);
+    transform: translateY(0) rotate(-45deg);
   }
 
   .nav-links {
@@ -134,11 +134,13 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    transition: right 0.3s ease;
+    transition: transform 0.3s ease-in-out;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
   }
 
   .nav-links.active {
+    transform: translateX(0);
     right: 0;
   }
 
@@ -147,5 +149,14 @@
     padding: 1rem;
     width: 100%;
     text-align: center;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active .nav-link {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
   }
 }
