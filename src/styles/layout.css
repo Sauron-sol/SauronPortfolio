@@ -1,0 +1,29 @@
+/* src/styles/layout.css */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px; /* Hauteur de la navbar */
+}
+
+.main-nav {
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+  background: #f8f9fa;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.main-nav a.active {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}

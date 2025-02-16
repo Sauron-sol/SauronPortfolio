@@ -1,0 +1,790 @@
+/* src/styles/home.css */
+:root {
+  --accent-red: #ff0000;
+  --text-black: #1a1a1a;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--text-black);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--accent-red);
+  font-weight: 400;
+}
+
+.intro-section,
+.skills-section {
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--text-black);
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skills-category {
+  margin-bottom: 3rem;
+}
+
+.category-title {
+  color: var(--accent-red);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent-red);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.skill-item {
+  background: rgba(248, 248, 248, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.dark-theme .skill-logo {
+  filter: invert(1);
+}
+
+.skill-info {
+  flex: 1;
+}
+
+.skill-item h4 {
+  margin-bottom: 1rem;
+  color: var(--text-black);
+  font-size: 1.1rem;
+}
+
+.skill-bar {
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.skill-progress {
+  height: 100%;
+  background: var(--accent-red);
+  transition: width 1s ease-in-out;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .skill-item {
+    padding: 1rem;
+  }
+}
+
+.education-section {
+  margin: 6rem 0;
+  padding: 0 2rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent-red);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -3rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-red);
+  border: 2px solid white;
+}
+
+.timeline-content {
+  background: rgba(248, 248, 248, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.year {
+  color: var(--accent-red);
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.timeline-content h3 {
+  color: var(--text-black);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.school-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.program {
+  color: var(--accent-red);
+  font-weight: 600;
+}
+
+.gpa {
+  margin-top: 0.5rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Ajouter à home.css */
+.experience-section {
+  margin: 6rem 0;
+}
+
+.experience-timeline {
+  position: relative;
+  padding-left: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent-red);
+}
+
+.experience-item {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -3.4rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-red);
+  border: 2px solid white;
+}
+
+.experience-content {
+  background: rgba(248, 248, 248, 0.9);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.period {
+  color: var(--accent-red);
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.role-info {
+  margin-bottom: 1.5rem;
+}
+
+.company {
+  font-weight: 500;
+  margin-left: 1rem;
+  color: #666;
+}
+
+.location {
+  color: #666;
+  font-style: italic;
+  margin-left: 1rem;
+}
+
+.tasks-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.tasks-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.tasks-list li::before {
+  content: '•';
+  color: var(--accent-red);
+  position: absolute;
+  left: 0;
+}
+
+/* Ajuster le style des tags technologiques */
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.tech-tag {
+  background: rgba(255, 0, 0, 0.1);
+  color: var(--accent-red);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--accent-red);
+}
+
+/* Ajouter à home.css */
+.experience-content .team {
+  color: var(--accent-red);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.experience-item.internship {
+  opacity: 0.9;
+}
+
+.experience-item.internship::before {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border: 2px solid var(--accent-red);
+}
+
+/* Ajuster l'espacement pour les expériences courtes */
+.experience-item.internship .experience-content {
+  padding: 1.5rem;
+}
+
+/* Ajouter à home.css */
+.experience-item.contract .experience-content {
+  border-left: 3px solid var(--accent-red);
+}
+
+.company-details {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Ajouter à home.css */
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 8px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.company-info {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .tech-stack {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .company-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Ajouter à home.css */
+.activity-item .details {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Ajouter à home.css */
+.certifications-section {
+  margin: 6rem 0;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Mise à jour des styles dans home.css */
+.certification-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center; /* Center children horizontally */
+}
+
+.certification-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-black);
+}
+
+.certification-card p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.certification-card .date {
+  color: var(--accent-red);
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.certification-card .verify-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent-red);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent-red);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.certification-card .verify-link:hover {
+  background: var(--accent-red);
+  color: white;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+}
+
+.certification-card .verify-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent-red);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.certification-card .cert-id {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.certification-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  align-self: center; /* Explicitly center the image */
+}
+
+.contact-section {
+  margin: 6rem 0;
+  text-align: center;
+}
+
+/* Update in home.css */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contact-icon {
+  width: 60px; /* Increased from 50px */
+  height: 60px; /* Increased from 50px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/* Specific adjustments for each icon */
+.contact-icon[href*="github"] img {
+  padding: 0;
+}
+
+.contact-icon[href*="linkedin"] img {
+  padding: 0;
+}
+
+.contact-icon[href*="mailto"] img {
+  padding: 4px;
+}
+
+.contact-icon:hover img {
+  transform: scale(1.1);
+}
+
+/* Style pour le SVG GitHub */
+.contact-icon[href*="github"] svg {
+  background: white;
+  padding: 12px;
+}
+
+/* Style pour le SVG LinkedIn */
+.contact-icon[href*="linkedin"] svg {
+  padding: 0;
+}
+
+/* Style pour le SVG Email */
+.contact-icon[href*="mailto"] svg {
+  background: white;
+  padding: 12px;
+}
+
+.contact-icon:hover svg {
+  transform: scale(1.1);
+}
+
+/* Styles spécifiques pour LinkedIn et Email */
+.contact-icon[href*="linkedin"] img,
+.contact-icon[href*="mailto"] img {
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* Style pour GitHub qui fonctionne déjà bien */
+.contact-icon[href*="github"] img {
+  object-fit: cover;
+}
+
+.contact-icon:hover img {
+  transform: scale(1.1);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.social-link {
+  color: var(--text-black);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent-red);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--accent-red);
+  color: white;
+}
+
+/* Ajuster les styles des badges dans home.css */
+.cert-badge {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+/* Add to home.css */
+.email-link {
+  display: inline-block;
+  color: var(--text-black);
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 2rem 0;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--accent-red);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.email-link:hover {
+  background: var(--accent-red);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Ajouter à home.css */
+.contact-intro {
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+  color: var(--text-black);
+}
+
+.dark-theme .contact-intro {
+  color: var(--text-dark);
+}
+
+/* Styles pour la section langues */
+.languages-section {
+  margin: 4rem 0;
+  padding: 0 1rem;
+}
+
+.languages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.language-item {
+  flex: 0 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--card-bg-light);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.language-item:hover {
+  transform: translateY(-5px);
+}
+
+.dark-theme .language-item {
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-flag {
+  width: 48px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .language-flag {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.language-item h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.language-item p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.dark-theme .language-item p {
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .languages-section {
+    margin: 3rem 0;
+  }
+
+  .languages-grid {
+    gap: 1rem;
+  }
+
+  .language-item {
+    flex: 0 1 100%;
+    padding: 1.5rem;
+  }
+
+  .language-flag {
+    width: 40px;
+    height: 28px;
+  }
+
+  .language-item h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Add to your CSS */
+.language-selector {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.lang-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.lang-flag {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.lang-btn:hover .lang-flag {
+  transform: scale(1.15);
+}
+
+/* Supprimer toutes les bordures et effets */
+.lang-btn,
+.lang-btn:hover,
+.lang-btn:focus,
+.lang-btn.active,
+.lang-flag {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.job-title {
+  font-size: 2rem;
+  color: #ff0000;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 0;
+}
+
+.cursor {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.cursor.visible {
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .job-title {
+    font-size: 1.5rem;
+  }
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.main-title {
+  margin-bottom: 0;
+}

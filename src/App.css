@@ -1,0 +1,574 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.page-transition {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation de fade pour les sections */
+.section-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation pour les cartes au survol */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Animation de progression des compétences */
+.skill-progress {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Animation pour les icônes de contact */
+.contact-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Style pour le logo GitHub uniquement */
+.contact-icon[href*="github"] {
+  background: white;
+  border-radius: 50%;
+}
+
+.contact-icon[href*="github"] img {
+  object-fit: cover;
+  padding: 20px; /* Increased from 8px */
+}
+
+/* Maintenir les autres styles */
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+
+.contact-icon:hover img {
+  transform: scale(1.1);
+}
+
+/* Animation de transition entre les pages */
+.page-enter {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s ease-out;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease-in;
+}
+
+/* Dans App.css - Définir les variables de couleurs */
+:root {
+  --bg-light: #ffffff;
+  --text-light: #1a1a1a;
+  --accent-light: #ff0000;
+  --card-bg-light: #f8f8f8;
+  --border-light: #eee;
+  
+  --bg-dark: #1a1a1a;
+  --text-dark: #ffffff;
+  --accent-dark: #ff4444;
+  --card-bg-dark: #2d2d2d;
+  --border-dark: #444;
+}
+
+/* Classes de thème */
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Ajustements pour les éléments spécifiques */
+.dark-theme .card {
+  background-color: var(--card-bg-dark);
+  border-color: var(--border-dark);
+}
+
+.dark-theme .nav-link {
+  color: var(--text-dark);
+}
+
+.dark-theme .tech-tag {
+  background: rgba(255, 68, 68, 0.1);
+  color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+/* Bouton toggle theme */
+.theme-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent-light);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000; /* Assurer que le bouton est toujours visible */
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.dark-theme .theme-toggle {
+  background: var(--accent-dark);
+}
+
+/* Dans App.css - Ajouter après les styles du theme-toggle */
+.language-selector {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.lang-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background: transparent;
+}
+
+.lang-btn:hover {
+  transform: scale(1.1);
+}
+
+.lang-btn.active {
+  box-shadow: 0 0 0 2px var(--accent-red);
+}
+
+.lang-flag {
+  width: 100%;
+  height: 100%;
+}
+
+/* Add dark theme styles for specific components */
+.dark-theme {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4 {
+  color: var(--text-dark);
+}
+
+.dark-theme .skill-item,
+.dark-theme .experience-content,
+.dark-theme .timeline-content,
+.dark-theme .certification-card,
+.dark-theme .activity-item {
+  background: var(--card-bg-dark);
+  color: var(--text-dark);
+}
+
+.dark-theme .tech-tag {
+  background: rgba(255, 68, 68, 0.1);
+  color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.dark-theme .company,
+.dark-theme .location,
+.dark-theme .gpa,
+.dark-theme .details {
+  color: #999;
+}
+
+.dark-theme .navbar {
+  background: rgba(26, 26, 26, 0.95);
+}
+
+.dark-theme .nav-link {
+  color: var(--text-dark);
+}
+
+.dark-theme .skill-bar {
+  background: #444;
+}
+
+.dark-theme .timeline::before,
+.dark-theme .experience-timeline::before {
+  background: var(--accent-dark);
+}
+
+.dark-theme .timeline-item::before,
+.dark-theme .experience-item::before {
+  background: var(--accent-dark);
+  border-color: var(--bg-dark);
+}
+
+/* Dark theme styles for all components */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme p,
+.dark-theme .subtitle,
+.dark-theme .category-title {
+  color: var(--text-dark);
+}
+
+/* Skills section dark mode */
+.dark-theme .skill-item {
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.dark-theme .skill-bar {
+  background: #444;
+}
+
+/* Certifications dark mode */
+.dark-theme .certification-card {
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.dark-theme .certification-card p,
+.dark-theme .certification-card .date,
+.dark-theme .certification-card .cert-id {
+  color: #999;
+}
+
+/* Education timeline dark mode */
+.dark-theme .timeline-content {
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.dark-theme .school-info h3,
+.dark-theme .timeline-content h4 {
+  color: var(--text-dark);
+}
+
+.dark-theme .gpa,
+.dark-theme .year {
+  color: #999;
+}
+
+/* Activities dark mode */
+.dark-theme .activity-item {
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.dark-theme .activity-item .details {
+  color: #999;
+}
+
+/* Dark theme text colors */
+.dark-theme .skill-item h4,
+.dark-theme .skill-category h3,
+.dark-theme .program,
+.dark-theme .degree,
+.dark-theme .school-info h3,
+.dark-theme .school-info .program,
+.dark-theme .timeline-content h4,
+.dark-theme .skills-grid h4 {
+  color: var(--text-dark);
+}
+
+/* Dark theme skill items */
+.dark-theme .skill-item {
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Dark theme education section */
+.dark-theme .timeline-content {
+  background: var(--card-bg-dark);
+}
+
+.dark-theme .timeline-content .year,
+.dark-theme .timeline-content .gpa {
+  color: #999;
+}
+
+.dark-theme .program {
+  color: var(--accent-dark);
+}
+
+/* Dark theme certification styles */
+.dark-theme .certification-card h3,
+.dark-theme .certification-card .title {
+  color: var(--text-dark);
+}
+
+.dark-theme .certification-card {
+  background: var(--card-bg-dark);
+}
+
+.dark-theme .certification-card p,
+.dark-theme .certification-card .issuer,
+.dark-theme .certification-card .date,
+.dark-theme .certification-card .cert-id {
+  color: #999;
+}
+
+.dark-theme .certification-card .verify-link {
+  color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.dark-theme .certification-card .verify-link:hover {
+  background: var(--accent-dark);
+  color: var(--text-dark);
+}
+
+/* Activity items styling */
+.activity-item {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dark-theme .activity-item {
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.activity-item h4 {
+  margin-bottom: 0.75rem;
+}
+
+.activity-item .period {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.activity-item .description {
+  margin-bottom: 0.75rem;
+}
+
+.activity-item .details {
+  margin-top: 0.75rem;
+}
+
+.activities-grid {
+  gap: 2rem;
+}
+
+/* Add dark theme styles to projects.css */
+.dark-theme .projects-container h1,
+.dark-theme .projects-container h3,
+.dark-theme .projects-container p {
+  color: var(--text-dark);
+}
+
+.dark-theme .project-card {
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.dark-theme .tech-tag {
+  background: rgba(255, 68, 68, 0.1);
+  color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.dark-theme .project-links a {
+  background: var(--bg-dark);
+}
+
+.dark-theme .project-links a img {
+  filter: invert(1); /* Make GitHub icon white in dark mode */
+}
+
+.dark-theme .description {
+  color: #999;
+}
+
+/* Styles pour la section Langues */
+.languages-section {
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.language-card {
+  background: var(--card-bg-light);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.dark-theme .language-card {
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-card:hover {
+  transform: translateY(-2px);
+}
+
+.language-flag {
+  width: 48px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.language-info {
+  flex: 1;
+  text-align: left;
+}
+
+.language-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.language-level {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.dark-theme .language-level {
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .languages-section {
+    padding: 1rem;
+  }
+  
+  .language-card {
+    padding: 1rem;
+  }
+  
+  .language-flag {
+    width: 40px;
+    height: 28px;
+  }
+  
+  .language-name {
+    font-size: 1.1rem;
+  }
+}
